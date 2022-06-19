@@ -1,0 +1,85 @@
+h1 {
+  font-size: 48px;
+}
+
+a:hover {
+  opacity: 0.8;
+  border-bottom: 1px solid #F8D0D0;
+  transition: all 0.2s ease-in-out;
+}
+
+.New__bg, .slider__bg {
+  background-color: rgb(46, 46, 46);
+  margin-top: 30px;
+  border-radius: 50px;
+  padding: 40px;
+}
+
+.slider .card {
+  width: 400px;
+  padding-top: 10px;
+  font-size: 18px;
+  color: #F8D0D0;
+  margin-right: 20px;
+  text-align: center;
+}
+.slider .card img {
+  width: 200px;
+  height: 300px;
+}
+.slider .card h4 {
+  padding-top: 5px;
+  text-align: center;
+}
+.slider .card:last-child {
+  margin-right: 0;
+}
+.slider .card__row {
+  display: flex;
+  justify-content: center;
+}
+
+.New__bg {
+  margin-bottom: 30px;
+}
+.New__bg img {
+  max-width: 300px;
+  max-height: 200px;
+  border-radius: 50px 0px 50px 0px;
+}
+.New__bg button, .New__bg h2 {
+  display: inline;
+}
+
+.Manga {
+  margin-top: 30px;
+  height: 280px;
+  max-width: 98%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  background-color: rgb(85, 11, 27);
+  border-radius: 50px;
+}
+.Manga .info {
+  padding-left: 20px;
+}
+.Manga h3 {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+.Manga a {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+.Manga h4 {
+  color: #F8D0D0;
+  font-size: 16px;
+  padding: 5px 0px;
+}
+.Manga p {
+  padding-top: 10px;
+  font-size: 18px;
+  line-height: 1.15;
+}/*# sourceMappingURL=Main_page.css.map */
