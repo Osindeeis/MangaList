@@ -82,4 +82,8 @@ a:hover {
   padding-top: 10px;
   font-size: 18px;
   line-height: 1.15;
+}
+
+.AddBtn, h3 {
+  display: inline-block;
 }/*# sourceMappingURL=Main_page.css.map */

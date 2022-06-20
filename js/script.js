@@ -1,8 +1,12 @@
 "use strict"
 
 const New = document.querySelector(".New__bg");
+const AddBtn=document.querySelector(".AddBtn");
+
 
 let cards;
+let MyManga=[];
+
 
 if(localStorage.card){
     cards = JSON.parse(localStorage.getItem("card"))
@@ -24,12 +28,17 @@ function Card(img,title, Genre,description) {
 const CreateCard = (card, index) => {
     return `
     <div class="Manga">
+    
     <img src="./img/${card.img}.jpg" alt="berserk">
     <div class="info">
         <h3><a href="#">${card.title}</a></h3>
+        <button onClick="AddMangaInMyList(${index})" class="AddBtn">Добавить</button>
         <h4>Жанры: ${card.Genre}</h4>
         <p>${card.description}</p>
+        
     </div>
+    
+
 </div>
     `
 }
@@ -53,5 +62,16 @@ const updateLocal = ()=>{
     localStorage.setItem("card",JSON.stringify(cards))
 }
 
+const updateMyManga = ()=>{
+    localStorage.setItem("manga",JSON.stringify(MyManga))
+}
+
+
+const AddMangaInMyList =(index)=>{
+    MyManga.push(cards[index])
+    MyManga=[...new Set(MyManga)]
+    updateMyManga()
+    console.log(MyManga)
+}
 
     
