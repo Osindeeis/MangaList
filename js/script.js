@@ -5,7 +5,7 @@ const AddBtn=document.querySelector(".AddBtn");
 
 
 let cards;
-let MyManga=[];
+let MyManga;
 
 
 if(localStorage.card){
@@ -15,7 +15,13 @@ else{
     cards=[]
 }
 
-
+if(localStorage.manga){
+    MyManga = JSON.parse(localStorage.getItem("manga"))
+}
+else{
+    MyManga=[]
+    
+}
 
 function Card(img,title, Genre,description) {
     this.img = img;
@@ -66,10 +72,11 @@ const updateMyManga = ()=>{
     localStorage.setItem("manga",JSON.stringify(MyManga))
 }
 
-
 const AddMangaInMyList =(index)=>{
-    MyManga.push(cards[index])
     MyManga=[...new Set(MyManga)]
+    MyManga.push(cards[index]) 
+    MyManga=[...new Set(MyManga)]
+    
     updateMyManga()
     console.log(MyManga)
 }
